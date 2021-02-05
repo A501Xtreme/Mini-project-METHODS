@@ -13,7 +13,16 @@ class Main {
     System.out.println("Your change is " +affordable(shoe, money));
     System.out.println("Thank you for shopping at Alex's shoe store make sure to come back again!");
     System.out.println("Did you have a good experience shopping at alex's shoe store?");
-    boolean goodShop = scan.nextBoolean();
+    
+    System.out.println("Would you like any add ons to your shoes such as colored shoe laces, colored off white ziptie or a off white tag.");
+    boolean addOns = scan.nextBoolean();
+    double laces = .50;
+    double ziptie = 1.50;
+    double tag = 5.00; 
+    
+    
+    System.out.println("The total you have to pay is  " + addOnsOption(laces, ziptie, tag, addOns));
+
     System.out.println("Thank you for your opnion, please let us know if we can improve anything on www.ALEX'Shoestore.com! ");
   }
 
@@ -26,6 +35,20 @@ class Main {
       System.out.println("Sorry, maybe next time");
       return money;
     }
-
   }
+
+    static double addOnsOption(double laces, double ziptie, double tag, boolean addOns){
+      if (addOns){
+        System.out.println("Cool, you want some attachments!");
+        return laces + ziptie + tag;
+      } else {
+        System.out.println("Oh its cool if you don't want it. ");
+      return 0;
+      }
+
+
+    }
+
+
+  
 }
